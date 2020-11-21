@@ -355,7 +355,7 @@ namespace Helios.Concurrency
                             Array.Resize(ref _workers, NumThreads);
 
                         //recreate worker
-                        for (int i = 0; i < _workers.Length; i++)
+                        for (int i = 0; i < _workers.Length && i < NumThreads; i++)
                         {
                             if (_workers[i] is null || _workers[i].Idle == -1)
                                 _workers[i] = new PoolWorker(this, i);
