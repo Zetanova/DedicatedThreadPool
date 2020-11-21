@@ -66,7 +66,7 @@ namespace Helios.Concurrency.Tests
 
             using (var threadPool = new DedicatedThreadPool(new DedicatedThreadPoolSettings(numThreads, null, TimeSpan.FromSeconds(1))))
             {
-                for (var i = 0; i < numThreads; i++)
+                for (var i = 0; i < numThreads*10; i++)
                 {
                     threadPool.QueueUserWorkItem(badCallback);
                     Thread.Sleep(20);
