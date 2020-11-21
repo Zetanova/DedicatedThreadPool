@@ -6,4 +6,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Threading.Channels" Version="5.0.0" />
+  </ItemGroup>
 </Project>
